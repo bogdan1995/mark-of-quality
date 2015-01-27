@@ -17,35 +17,38 @@ var
     wiredep = require('wiredep').stream,
     connect = require('gulp-connect'),
     compass = require('gulp-compass'),
-    prettify = require('gulp-html-prettify');
+    prettify = require('gulp-html-prettify'),
+    plumber = require('gulp-plumber');
 
 gulp.task('connect', function () {
     connect.server({
         root: 'proj',
         livereload: true,
-        port: 8000
+        port: 8080
     });
-    opn('http://localhost:8000/');
+    opn('http://localhost:8080/');
 });
 
 gulp.task('css', function() {
-    gulp.src('proj/scss/**/*.scss')
+    gulp.src('./proj/scss/**/*.scss')
+        .pipe(plumber({errorHandler: notify.onError("SCSS: compilation error")}))
         .pipe(compass({
-            css: 'proj/css',
-            sass: 'proj/scss',
+            css: './proj/css',
+            sass: './proj/scss',
             require: ['compass']
         }))
         .pipe(autoprefixer({
             browsers: ['last 15 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('proj/css'))
+        .pipe(gulp.dest('./proj/css'))
         .pipe(connect.reload())
         .pipe(notify("SCSS done!"));
 });
 
 gulp.task('jade', function () {
     gulp.src('./proj/jade/_pages/*.jade')
+        .pipe(plumber({errorHandler: notify.onError("Jade: compilation error")}))
         .pipe(jade())
         .pipe(prettify({indent_char: ' ', indent_size: 2}))
         .pipe(gulp.dest('./proj/'))
@@ -66,6 +69,7 @@ gulp.task('jade', function () {
 
 gulp.task('jshint', function () {
     return gulp.src('./proj/js/*.js')
+        .pipe(plumber({errorHandler: notify.onError("JS: compilation error")}))
         .pipe(jshint())
         .pipe(connect.reload())
         .pipe(notify("JS done!"));
@@ -73,9 +77,10 @@ gulp.task('jshint', function () {
 });
 
 gulp.task('wiredep', function () {
-    gulp.src('proj/*.html')
+    gulp.src('./proj/*.html')
+        .pipe(plumber({errorHandler: notify.onError("wiredep: <%= error.message %>")}))
         .pipe(wiredep({
-            directory: 'proj/bower_components'
+            directory: './proj/bower_components'
         }))
         .pipe(connect.reload())
         .pipe(notify("wiredep done!"))
@@ -92,13 +97,13 @@ gulp.task('watch', function () {
 
 gulp.task('build', function () {
     var assets = useref.assets();
-    return gulp.src('proj/*.html')
+    return gulp.src('./proj/*.html')
         .pipe(assets)
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(assets.restore())
         .pipe(useref())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('clean', function () {
