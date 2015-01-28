@@ -1,3 +1,14 @@
 // =======================
 // Layout/Header
 // =======================
+
+.header {
+  width: 980px;
+}
+
+.header {
+  &__container {
+    width: 100%;
+  }
+
+}

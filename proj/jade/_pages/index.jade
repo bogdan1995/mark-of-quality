@@ -4,4 +4,82 @@ block title
     title Article Title
 
 block content
-    .container Hello, world!
+    .container
+        .row
+            .header-contacts
+                .header__address
+                    .header__address-place Санкт-Петербург
+                .clock
+                    .clock-time Режим работы: с 10.00 до 20.00
+            .logo
+                a(href-"#").logo-link
+                    img(src="/")
+                    h1.text-hidden
+            .header-nav
+                .header-phone
+                    a(href="tel:+78123166433").header-number <sub>+7 (812)</sub> 316 64 33
+            .nav
+                ul.nav__list
+                    each item in ['Главная','Услуги и цены', 'О нас', 'Контакты']
+                        li.nav__list-item
+                            a(hre="#").nav__list-link=item
+    .container
+        .row
+            h1.company-name Центр правовой помощи
+    .container
+    .container
+        .row
+            ul.advantages__list
+                li.advantages__list-item
+                    a(href="#").advantages__list-link.advantages__list-link_practice 15 лет юридической практики
+                li.advantages__list-item
+                    a(href="#").advantages__list-link.advantages__list-link_deal До 95% выигранных дел
+                li.advantages__list-item
+                    a(href="#").advantages__list-link.advantages__list-link_cost Стоимость консультации от 500 рублей
+                li.advantages__list-item
+                    a(href="#").advantages__list-link.advantages__list-link_result Работа только на результат
+    .container
+        .row
+            h1.services-name Юридические услуги
+    .container
+        .row
+            .services-names
+                .services-individuals
+                .services-entities
+            .services__left
+                ul.services__left__list
+                    li.services__left__list-item
+                        a(href="#").services__left__list-item Решение споров
+                    li.services__left__list-item
+                        a(href="#").services__left__list-item Защита в суде
+                    li.services__left__list-item
+                        a(href="#").services__left__list-item Сопровождение сделок с недвижимостью
+                    li.services__left__list-item
+                        a(href="#").services__left__list-item Составление, подача жалоб
+            .services__right
+                ul.services__right__list
+                    li.services__right__list-item
+                        a(href="#").services__right__list-item Регистрация, реорганизация, ликвидация ООО, АО
+                    li.services__right__list-item
+                        a(href="#").services__right__list-item Абонентское юридическое обслуживание
+                    li.services__right__list-item
+                        a(href="#").services__right__list-item Досудебное урегулирование споров
+                    li.services__right__list-item
+                        a(href="#").services__right__list-item Защита и представление интересов в суде
+            .services__list
+                a(href="#").services__list-link Посмотреть полный список услуг и цен
+    .container
+        .row
+            .call__slogan
+                h1.call__slogan-name Мы обязательно решим Вашу проблему
+            .call__offer
+                p.call__offer-name позвоните по номеру
+            .call__nubmer
+                a(href="tel:+78123166433") +7 (812) 316 64 33
+    .container
+        .row
+            .footer__up Вверх
+            .footer__copyright
+                p.footer__copyright-text &copy; 2015  Все права защищены. Центр правовой помощи “Знак качества”
+
+
