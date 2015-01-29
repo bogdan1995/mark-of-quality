@@ -1,3 +1,103 @@
 // =======================
 // Modules/Icons
 // =======================
+
+.icon-contract, .icon-deal, .icon-hand, .icon-home, .icon-idea, .icon-law, .icon-people, .icon-scales, .icon-phone, .icon-place, .icon-time, .consult, .deal, .prac, .result{
+  background: url(/img/sprites.png) no-repeat;
+}
+
+.icon-place, .icon-time, .icon-phone {
+  position: absolute;
+  content: '';
+  left: 19px;
+}
+
+.icon-contract{
+  background-position: 0 0;
+  width: 55px;
+  height: 57px;
+}
+
+.icon-deal{
+  background-position: -60px 0;
+  width: 62px;
+  height: 62px;
+}
+
+.icon-hand{
+  background-position: 0 -60px ;
+  width: 42px;
+  height: 55px;
+}
+
+.icon-home{
+  background-position: -50px -65px ;
+  width: 67px;
+  height: 47px;
+}
+
+.icon-idea{
+  background-position: -125px 0;
+  width: 49px;
+  height: 53px;
+}
+
+.icon-law{
+  background-position: -120px -55px ;
+  width: 48px;
+  height: 54px;
+}
+
+.icon-people{
+  background-position: -180px 0;
+  width: 47px;
+  height: 48px;
+}
+
+.icon-scales{
+  background-position: -170px -50px ;
+  width: 60px;
+  height: 61px;
+}
+
+.icon-phone{
+  background-position: -200px -175px ;
+  width: 22px;
+  height: 21px;
+}
+
+.icon-place{
+  background-position: -200px -150px ;
+  width: 14px;
+  height: 18px;
+}
+
+.icon-time{
+  background-position: -200px -125px ;
+  width: 15px;
+  height: 15px;
+}
+
+.consult{
+  background-position: 0 -522px ;
+  width: 193px;
+  height: 193px;
+}
+
+.deal{
+  background-position: 0 -323px ;
+  width: 193px;
+  height: 193px;
+}
+
+.prac{
+  background-position: 0 -719px ;
+  width: 193px;
+  height: 193px;
+}
+
+.result{
+  background-position: 0 -126px ;
+  width: 193px;
+  height: 193px;
+}

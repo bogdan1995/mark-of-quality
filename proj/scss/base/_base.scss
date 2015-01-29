@@ -23,8 +23,17 @@ hr {
     padding: 0;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 li {
     list-style: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 .text-hidden {
@@ -39,4 +48,8 @@ li {
 .row {
     width: 980px;
     margin: 0 auto;
+}
+
+.slider {
+    background: $color-main;
 }

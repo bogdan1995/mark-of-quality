@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "jquery-placeholder": "~2.0.8",
-    "jquery": "1.10.2"
+    "jquery": "1.10.2",
+    "bxslider": "*"
   }
 }

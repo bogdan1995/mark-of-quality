@@ -6,27 +6,38 @@ block title
 block content
     .container
         .row
-            .header-contacts
-                .header__address
-                    .header__address-place Санкт-Петербург
-                .clock
-                    .clock-time Режим работы: с 10.00 до 20.00
-            .logo
-                a(href-"#").logo-link
-                    img(src="/")
-                    h1.text-hidden
-            .header-nav
-                .header-phone
-                    a(href="tel:+78123166433").header-number <sub>+7 (812)</sub> 316 64 33
-            .nav
-                ul.nav__list
-                    each item in ['Главная','Услуги и цены', 'О нас', 'Контакты']
-                        li.nav__list-item
-                            a(hre="#").nav__list-link=item
+            .header
+                .header-contacts
+                    .header__address
+                        .header__address-place Санкт-Петербург
+                    .clock
+                        .clock-time Режим работы: с 10.00 до 20.00
+                .logo
+                    a(href="#").logo-link
+                        img(src="/img/logo.png")
+                        h1.text-hidden
+                .header-nav
+                    .header-phone
+                        a(href="tel:+78123166433").header-number +7 (812) <span>316 64 33</span>
+                    .nav
+                        ul.nav__list
+                            each item in ['Главная','Услуги и цены', 'О нас', 'Контакты']
+                                li.nav__list-item
+                                    a(href="#").nav__list-link.hvr-sweep-to-bottom=item
+            .company
+                h1.company-name Центр правовой помощи
     .container
-        .row
-            h1.company-name Центр правовой помощи
-    .container
+        .slider
+            ul.slider__list
+                li.slider__list-item
+                    img(src="/img/slider/slide1.png").slider__list-img
+                    img(src="/img/slider/woman-slide1.png").slider__list-img.slider__list-img_anim
+                li.slider__list-item
+                    img(src="/img/slider/slide2.png").slider__list-img
+                    img(src="/img/slider/man-slide2.png").slider__list-img.slider__list-img_anim
+                li.slider__list-item
+                    img(src="/img/slider/slide3.png").slider__list-img
+                    img(src="/img/slider/woman-slide3.png").slider__list-img.slider__list-img_anim
     .container
         .row
             ul.advantages__list

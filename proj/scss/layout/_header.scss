@@ -3,12 +3,102 @@
 // =======================
 
 .header {
-  width: 980px;
-}
+  @extend .clearfix;
+  position: relative;
+  padding-top: 39px;
 
-.header {
   &__container {
     width: 100%;
   }
+  &-contacts, &-nav {
+    width: 398px;
+  }
+  &-contacts {
+    float: left;
+  }
+  &-nav {
+    float: right;
+  }
+  &-phone {
+    text-align: right;
+    padding: 0 14px 19px 0;
+    margin-bottom: 4px;
+  }
+  &-number {
+    position: relative;
+    font-size: 22px;
+    color: $color-link;
+      span {
+        font-size: 30px;
+        color: $color-main;
+        font-family: 'open_sansbold';
+      }
+    &:before {
+      @extend .icon-phone;
+      left: -39px !important;
+      top: 5px;
+    }
+  }
+}
+
+.header__address, .header-phone {
+  border-bottom: 1px solid $color-main;
+}
+
+.header__address-place, .clock-time {
+  padding: 0 0 16px 47px;
+}
+
+.header__address {
+  margin-bottom: 19px;
+  &-place {
+    font-size: 18px;
+    padding-top: 13px;
+    &:before {
+      @extend .icon-place;
+    }
+  }
+}
+
+.clock-time {
+  font-size: 16px;
+  &:before {
+    @extend .icon-time;
+  }
+}
+
+.logo {
+  position: absolute;
+  width: 124px;
+  top: 13px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.nav__list {
+  text-align: justify;
+  &-item {
+    display: inline-block;
+  }
+  &-link {
+    position: relative;
+    font-family: 'open_sansbold';
+    line-height: 46px;
+    padding: 0 8px;
+    &_active {
+      color: white;
+      background: $color-main;
+    }
+  }
+}
+
+.company-name {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'open_sanssemibold';
+  font-size: 22px;
+  margin: 5px 0;
 
 }
