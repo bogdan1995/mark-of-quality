@@ -9,6 +9,7 @@ $main-font: 'open_sansregular', Arial, sans-serif;
 /* Color variables */
 
 $color-main: #b6ce43;
-
+$color-border: rgba(#9fa19d, .5);
+$color-sloganText: #313231;
 $color-link: #000;
 $color-link-hover: lighten($color-link, 40%);

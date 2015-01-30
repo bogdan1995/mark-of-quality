@@ -26,7 +26,7 @@ gulp.task('connect', function () {
         livereload: true,
         port: 8080
     });
-    opn('http://localhost:8080/');
+    //opn('http://localhost:8080/');
 });
 
 gulp.task('css', function() {

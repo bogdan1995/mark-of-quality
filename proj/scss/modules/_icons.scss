@@ -2,8 +2,8 @@
 // Modules/Icons
 // =======================
 
-.icon-contract, .icon-deal, .icon-hand, .icon-home, .icon-idea, .icon-law, .icon-people, .icon-scales, .icon-phone, .icon-place, .icon-time, .consult, .deal, .prac, .result{
-  background: url(/img/sprites.png) no-repeat;
+.icon, .icon-contract, .icon-deal, .icon-hand, .icon-home, .icon-idea, .icon-law, .icon-people, .icon-scales, .icon-phone, .icon-place, .icon-time, .consult, .deal, .prac, .result{
+  background: url(/img/sprites.png) no-repeat center;
 }
 
 .icon-place, .icon-time, .icon-phone {
@@ -61,43 +61,39 @@
 }
 
 .icon-phone{
-  background-position: -200px -175px ;
+  background-position: -200px -170px ;
   width: 22px;
   height: 21px;
 }
 
 .icon-place{
-  background-position: -200px -150px ;
+  background-position: -200px -145px ;
   width: 14px;
   height: 18px;
 }
 
 .icon-time{
-  background-position: -200px -125px ;
+  background-position: -200px -120px ;
   width: 15px;
   height: 15px;
 }
 
-.consult{
-  background-position: 0 -522px ;
-  width: 193px;
-  height: 193px;
+%consult{
+  background-position: 12px -552px;
 }
 
-.deal{
-  background-position: 0 -323px ;
-  width: 193px;
-  height: 193px;
+%deal{
+  background-position: 12px -331px ;
 }
 
-.prac{
-  background-position: 0 -719px ;
-  width: 193px;
-  height: 193px;
+%prac{
+  background-position: 12px -775px ;
 }
 
-.result{
-  background-position: 0 -126px ;
-  width: 193px;
-  height: 193px;
+%result{
+  background-position: 12px -109px ;
 }
+%result, %prac, %deal, %consult {
+  background-color: #fff;
+}
+
