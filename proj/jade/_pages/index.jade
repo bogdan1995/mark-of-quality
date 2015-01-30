@@ -82,33 +82,51 @@ block content
 
     .services
         .container
-            .row
-                h1.services-name Юридические услуги
+            h1.services-name Юридические услуги
+    .services__wrapper
         .container
             .row
-                .services-names
-                    .services-individuals
-                    .services-entities
+                .services-data
+                    .services__left
+                        .services-text Физическим лицам
+                    .services__right
+                        .services-text Организациям
                 .services__left
                     ul.services__left__list
                         li.services__left__list-item
-                            a(href="#").services__left__list-item Решение споров
+                            a(href="#").services__left__list-link Решение споров
+                            .services__list-icon_wrapper
+                                .services__left__list-icon.services__left__list-icon_hand
                         li.services__left__list-item
-                            a(href="#").services__left__list-item Защита в суде
+                            a(href="#").services__left__list-link Защита в суде
+                            .services__list-icon_wrapper
+                                .services__left__list-icon.services__left__list-icon_scales
                         li.services__left__list-item
-                            a(href="#").services__left__list-item Сопровождение сделок с недвижимостью
+                            a(href="#").services__left__list-link Сопровождение сделок с недвижимостью
+                            .services__list-icon_wrapper
+                                .services__left__list-icon.services__left__list-icon_home
                         li.services__left__list-item
-                            a(href="#").services__left__list-item Составление, подача жалоб
+                            a(href="#").services__left__list-link Составление, подача жалоб
+                            .services__list-icon_wrapper
+                                .services__left__list-icon.services__left__list-icon_deal
                 .services__right
                     ul.services__right__list
                         li.services__right__list-item
-                            a(href="#").services__right__list-item Регистрация, реорганизация, ликвидация ООО, АО
+                            .services__list-icon_wrapper
+                                .services__right__list-icon.services__right__list-icon_contract
+                            a(href="#").services__right__list-link Регистрация, реорганизация, ликвидация ООО, АО
                         li.services__right__list-item
-                            a(href="#").services__right__list-item Абонентское юридическое обслуживание
+                            .services__list-icon_wrapper
+                                .services__right__list-icon.services__right__list-icon_people
+                            a(href="#").services__right__list-link Абонентское юридическое обслуживание
                         li.services__right__list-item
-                            a(href="#").services__right__list-item Досудебное урегулирование споров
+                            .services__list-icon_wrapper
+                                .services__right__list-icon.services__right__list-icon_idea
+                            a(href="#").services__right__list-link Досудебное урегулирование споров
                         li.services__right__list-item
-                            a(href="#").services__right__list-item Защита и представление интересов в суде
+                            .services__list-icon_wrapper
+                                .services__right__list-icon.services__right__list-icon_law
+                            a(href="#").services__right__list-link Защита и представление интересов в суде
                 .services__list
                     a(href="#").services__list-link Посмотреть полный список услуг и цен
     .container

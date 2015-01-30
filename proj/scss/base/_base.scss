@@ -53,3 +53,7 @@ img {
 .slider {
     background: $color-main;
 }
+
+.row {
+    @extend .clearfix;
+}
