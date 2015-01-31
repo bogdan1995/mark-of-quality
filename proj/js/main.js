@@ -7,10 +7,15 @@ var app =(function () {
 		},
 		setUpListeners: function () {
 			$('.slider__list').bxSlider(app.SLIDER_OPT);
-			$('.pager-link').text('');
-			//$('.bx-next, .bx-prev, .pager-link').ready(app.animatePeople).on('click', app.animatePeople);
-			$('.slider__list-item').on("mouseover", app.seachSlide);
-
+			$('.scene').parallax();
+			$('.services-name').waypoint(function () {
+				$(".services__right").removeClass("hidden").addClass('fadeInRightBig');
+				$(".services__left").removeClass("hidden").addClass('fadeInLeftBig');
+				$(".services-data").removeClass("hidden").addClass('fadeInDown');
+			}, {offset: "100px"});
+			$('.advantages').waypoint(function () {
+				$(".advantages__list").removeClass("hidden").addClass('fadeInDown');
+			}, {offset: "100px"});
 		},
 		SLIDER_OPT: {
 			mode: 'horizontal',
@@ -19,21 +24,27 @@ var app =(function () {
 			auto: false,
 			responsive: true,
 			touchEnabled: true,
-			"onSlideNext": function (a) {
-				console.log("I'm work");
+			onSlideNext: function (elem) {
+				app.animatePeople(elem);
+			},
+			onSlidePrev: function (elem) {
+				app.animatePeople(elem);
+			},
+			onSliderLoad: function () {
+				var animLabel = $('.slider__list-label'),
+					animImg = $('.slider__list-img_anim');
+				animImg.removeClass("hidden").addClass('fadeInRightBig');
+				animLabel.removeClass("hidden").addClass('rotateInDownLeft');
 			},
 			pager: true
 		},
-		seachSlide: function () {
-			//var $this = $(this),
-			//	animatePeople = function () {
-			//		$this.next().find('.slider__list-img_anim').addClass('animate fadeInRight');
-			//	}
-			//$('.bx-next, .bx-prev, .pager-link').on("click", function () {
-			//	animatePeople();
-			//	console.log($this);
-			//});
-
+		animatePeople: function (elem) {
+			var animLabel = $('.slider__list-label'),
+				animImg = $('.slider__list-img_anim');
+			animImg.removeClass('fadeInRightBig').addClass("hidden");
+			elem.find(animImg).removeClass("hidden").addClass('fadeInRightBig');
+			animLabel.removeClass('rotateInDownLeft').addClass("hidden");
+			elem.find(animLabel).removeClass("hidden").addClass('rotateInDownLeft');
 		}
 	}
 })();

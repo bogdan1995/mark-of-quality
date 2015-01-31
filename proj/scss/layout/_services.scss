@@ -5,6 +5,20 @@
 .services__wrapper {
   background:  url(/img/line.png) center 126px no-repeat, url(/img/background_services.png) 0 -15px no-repeat;
   padding-top: 15px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: 16px solid $color-main;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+  }
 }
 
 .services {
@@ -211,5 +225,9 @@
     -moz-box-shadow: 0 2px 0 #8FA035;
     -webkit-box-shadow: 0 2px 0 #8FA035;
     box-shadow: 0 2px 0 #8FA035;
+    transition: .3s all ease-in;
+    &:hover {
+      background: darken($color-main, 10%);
+    }
   }
 }

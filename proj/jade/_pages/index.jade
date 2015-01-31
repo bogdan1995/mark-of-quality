@@ -32,39 +32,45 @@ block content
             .slider
                 ul.slider__list
                     li.slider__list-item
-                        img(src="/img/slider/slide1.png").slider__list-img
-                        .slider__list-label
-                            .slider__list-wrapper
-                                h2.slder__list-slogan Наша цель - решить вашу проблему
-                                p.slider__list-text Мы не даем пустых обещаний. Не обнадеживаем вас, не имея для этого оснований. Мы беремся за ведение дела, только выявив реальную возможность решения вопроса в вашу пользу
-                        img(src="/img/slider/woman-slide1.png").slider__list-img.slider__list-img_anim
+                        ul.scene
+                            img(src="/img/slider/slide1.png").slider__list-img
+                            li.layer.layer_text(data-depth="0.10")
+                                .slider__list-label.animated.hidden
+                                    .slider__list-wrapper
+                                        h2.slder__list-slogan Наша цель - решить вашу проблему
+                                        p.slider__list-text Мы не даем пустых обещаний. Не обнадеживаем вас, не имея для этого оснований. Мы беремся за ведение дела, только выявив реальную возможность решения вопроса в вашу пользу
+                            img(src="/img/slider/woman-slide1.png").slider__list-img.slider__list-img_anim.animated.hidden
                     li.slider__list-item
-                        img(src="/img/slider/slide2.png").slider__list-img
-                        .slider__list-label
-                            .slider__list-wrapper
-                                h2.slder__list-slogan споры с работодателем
-                                p.slider__list-text Одна из наших ключевых компетенций. Будьте уверены в результате!
-                                .slider__list__offer
-                                    p.slider__list__offer-text Стоимость <s>15 000 руб.</s> <span>10 000 руб.</span>
-                                    p.slider__list__offer-text.slider__list__offer-text_bold Только до конца февраля
-                        img(src="/img/slider/man-slide2.png").slider__list-img.slider__list-img_anim
+                        ul.scene
+                            img(src="/img/slider/slide2.png").slider__list-img
+                            li.layer.layer_text(data-depth="0.10")
+                                .slider__list-label.animated.hidden
+                                    .slider__list-wrapper
+                                        h2.slder__list-slogan споры с работодателем
+                                        p.slider__list-text Одна из наших ключевых компетенций. Будьте уверены в результате!
+                                        .slider__list__offer
+                                            p.slider__list__offer-text Стоимость <s>15 000 руб.</s> <span>10 000 руб.</span>
+                                            p.slider__list__offer-text.slider__list__offer-text_bold Только до конца февраля
+                            img(src="/img/slider/man-slide2.png").slider__list-img.slider__list-img_anim.animated.hidden
                     li.slider__list-item
-                        img(src="/img/slider/slide3.png").slider__list-img
-                        .slider__list-label
-                            .slider__list-wrapper
-                                h2.slder__list-slogan Регистрация фирм
-                                p.slider__list-text Различных организационно-правовых форм,индивидуальных предпринимателей, некоммерческих организаций.
-                                .slider__list__offer
-                                    p.slider__list__offer-text Регистрация фирм <s>5 000 руб.</s> <span>4 250 руб.</span>
-                                    p.slider__list__offer-text Регистрация ИП <s>2 500 руб.</s> <span>1 900 руб.</span>
-                                    p.slider__list__offer-text.slider__list__offer-text_bold Только до конца февраля
-                        img(src="/img/slider/woman-slide3.png").slider__list-img.slider__list-img_anim
+                        ul.scene
+                            img(src="/img/slider/slide3.png").slider__list-img
+                            li.layer.layer_text(data-depth="0.10")
+                                .slider__list-label.animated.hidden
+                                    .slider__list-wrapper
+                                        h2.slder__list-slogan Регистрация фирм
+                                        p.slider__list-text Различных организационно-правовых форм,индивидуальных предпринимателей, некоммерческих организаций.
+                                        .slider__list__offer
+                                            p.slider__list__offer-text Регистрация фирм <s>5 000 руб.</s> <span>4 250 руб.</span>
+                                            p.slider__list__offer-text Регистрация ИП <s>2 500 руб.</s> <span>1 900 руб.</span>
+                                            p.slider__list__offer-text.slider__list__offer-text_bold Только до конца февраля
+                            img(src="/img/slider/woman-slide3.png").slider__list-img.slider__list-img_anim.animated.hidden
 
 
     .advantages
         .container
             .row
-                ul.advantages__list
+                ul.advantages__list.animated.hidden
                     li.advantages__list-item
                         a(href="#").advantages__list-link
                             .advantages__list-pic.advantages__list-pic_prac
@@ -88,14 +94,14 @@ block content
     .services__wrapper
         .container
             .row
-                .services-data
+                .services-data.animated.hidden
                     .services__left
                         .services-text Физическим лицам
                     .services__right
                         .services-text Организациям
                     .pipcad
                 .services-wrapper
-                    .services__left
+                    .services__left.animated.hidden
                         ul.services__left__list
                             li.services__left__list-item
                                 a(href="#").services__left__list-link Решение споров
@@ -113,7 +119,7 @@ block content
                                 a(href="#").services__left__list-link Составление, подача жалоб
                                 .services__list-icon_wrapper
                                     .services__left__list-icon.services__left__list-icon_deal
-                    .services__right
+                    .services__right.animated.hidden
                         ul.services__right__list
                             li.services__right__list-item
                                 .services__list-icon_wrapper
