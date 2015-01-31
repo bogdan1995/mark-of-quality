@@ -2,3 +2,37 @@
 // Layout/Footer
 // =======================
 
+.footer {
+  text-align: center;
+  background: url(/img/bg.png) repeat-x #313231;
+}
+
+.footer__up {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 37px;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 615px;
+    height: 1px;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background: #fff;
+  }
+  &-link {
+    font-size: 17px;
+    color: #fff;
+  }
+}
+
+.footer__copyright {
+  padding-top: 20px;
+  margin-bottom: 42px;
+  &-text {
+    margin: 0;
+    color: #fff;
+  }
+}

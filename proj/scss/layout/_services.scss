@@ -3,8 +3,7 @@
 // =======================
 
 .services__wrapper {
-  background: url(/img/background_services.png) 0 -15px;
-  background-size: cover;
+  background:  url(/img/line.png) center 126px no-repeat, url(/img/background_services.png) 0 -15px no-repeat;
   padding-top: 15px;
 }
 
@@ -29,11 +28,44 @@
   }
   &-data {
     @extend .clearfix;
+    position: relative;
     margin-top: 45px;
     border-bottom: 1px solid $color-main;
     margin-bottom: 56px;
+    position: relative;
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 0;
+      width: 0;
+      border-top: 11px solid $color-main;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+    }
+    &:before {
+      top: 44px;
+      border-top: 11px solid $color-main;
+    }
+    &:after {
+      top: 43px;
+      border-top: 11px solid $color-wrapper;
+    }
   }
 }
+
+.pipcad {
+  clear: both;
+}
+
+.services-wrapper {
+  @extend .clearfix;
+  margin-bottom: 86px;
+}
+
 .services__left, .services__right {
   width: 50%;
 }
@@ -118,8 +150,8 @@
     .services__right__list-link, .services__left__list-link {
       color: $color-main;
     }
-    .services__left__list-icon_wrapper, .services__right__list-icon_wrapper {
-      border: 1px solid red;
+    .services__list-icon_wrapper {
+      border: 1px solid $color-border;
     }
     .services__right__list-icon, .services__left__list-icon {
       background: $color-main;
@@ -158,4 +190,26 @@
 
 .services__right__list-icon_law:before {
   @extend .icon-law;
+}
+
+// Button
+
+.services__list {
+  text-align: center;
+  margin-bottom: 105px;
+  &-link {
+    display: inline-block;
+    line-height: 62px;
+    background: $color-main;
+    padding: 0 38px;
+    font-size: 17px;
+    font-family: 'open_sanssemibold';
+    color: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 0 #8FA035;
+    -webkit-box-shadow: 0 2px 0 #8FA035;
+    box-shadow: 0 2px 0 #8FA035;
+  }
 }

@@ -1,0 +1,50 @@
+// =======================
+// Layout/Call
+// =======================
+
+.call {
+  text-align: center;
+  background: url(/img/background_call.png) center no-repeat;
+}
+
+.call__slogan {
+  padding-top: 56px;
+  margin-bottom: 45px;
+  &-name {
+    text-transform: uppercase;
+    font-size: 37px;
+    margin: 0;
+  }
+}
+
+.call__offer {
+  margin-bottom: 36px;
+  &-name {
+    position: relative;
+    font-family: 'open_sanssemibold_italic';
+    font-size: 32px;
+    text-transform: lowercase;
+    color: #fff;
+    margin: 0;
+    padding: 0 34px;
+    display: inline-block;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.call__nubmer {
+  margin-bottom: 111px;
+  &-link {
+    font-family: 'open_sanssemibold';
+    font-size: 60px;
+    color: #313231;
+  }
+}
